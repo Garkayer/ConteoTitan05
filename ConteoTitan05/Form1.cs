@@ -41,24 +41,7 @@ namespace ConteoTitan05
 
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            double[] denominaciones = { 100, 50, 20, 10, 5, 1, 0.50, 0.25, 0.10, 0.05, 0.01 };
-            double cantidad = double.Parse(txtCantidad.Text);
-            sbyte n = 0;
-            String respuesta = "Respuesta: \n";
-            foreach (double denominacion in denominaciones)
-            {
-                while (denominacion <= Math.Round(cantidad, 2))
-                {
-                    n++;
-                    cantidad -= denominacion;
-                }
-                if (n > 0)
-                {
-                    respuesta += n + (denominacion > 1 ? " Billetes " : " Monedas ") + denominacion + "\n";
-                }
-                n = 0;
-            }
-            lblRespuesta.Text = respuesta;
+           
 
         }
 
