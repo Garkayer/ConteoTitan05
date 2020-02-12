@@ -28,21 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblRetirar = new System.Windows.Forms.Button();
+            this.btnRetirar = new System.Windows.Forms.Button();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.lblRespuesta = new System.Windows.Forms.Label();
+            this.btnPagar = new System.Windows.Forms.Button();
+            this.btnFibonacci = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lblRetirar
+            // btnRetirar
             // 
-            this.lblRetirar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRetirar.Location = new System.Drawing.Point(66, 132);
-            this.lblRetirar.Name = "lblRetirar";
-            this.lblRetirar.Size = new System.Drawing.Size(117, 51);
-            this.lblRetirar.TabIndex = 0;
-            this.lblRetirar.Text = "RETIRAR";
-            this.lblRetirar.UseVisualStyleBackColor = true;
+            this.btnRetirar.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRetirar.Location = new System.Drawing.Point(12, 117);
+            this.btnRetirar.Name = "btnRetirar";
+            this.btnRetirar.Size = new System.Drawing.Size(117, 51);
+            this.btnRetirar.TabIndex = 0;
+            this.btnRetirar.Text = "RETIRAR";
+            this.btnRetirar.UseVisualStyleBackColor = true;
+            this.btnRetirar.Click += new System.EventHandler(this.btnRetirar_Click);
             // 
             // lblCantidad
             // 
@@ -69,20 +72,43 @@
             this.lblRespuesta.TabIndex = 3;
             this.lblRespuesta.Text = "Respuesta: ?";
             // 
+            // btnPagar
+            // 
+            this.btnPagar.Location = new System.Drawing.Point(180, 117);
+            this.btnPagar.Name = "btnPagar";
+            this.btnPagar.Size = new System.Drawing.Size(86, 51);
+            this.btnPagar.TabIndex = 4;
+            this.btnPagar.Text = "Pagar";
+            this.btnPagar.UseVisualStyleBackColor = true;
+            this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
+            // 
+            // btnFibonacci
+            // 
+            this.btnFibonacci.Location = new System.Drawing.Point(12, 195);
+            this.btnFibonacci.Name = "btnFibonacci";
+            this.btnFibonacci.Size = new System.Drawing.Size(75, 23);
+            this.btnFibonacci.TabIndex = 6;
+            this.btnFibonacci.Text = "Fibonacci";
+            this.btnFibonacci.UseVisualStyleBackColor = true;
+            this.btnFibonacci.Click += new System.EventHandler(this.BtnFibonacci_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(310, 261);
+            this.ClientSize = new System.Drawing.Size(306, 261);
+            this.Controls.Add(this.btnFibonacci);
+            this.Controls.Add(this.btnPagar);
             this.Controls.Add(this.lblRespuesta);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lblCantidad);
-            this.Controls.Add(this.lblRetirar);
+            this.Controls.Add(this.btnRetirar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,10 +116,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button lblRetirar;
+        private System.Windows.Forms.Button btnRetirar;
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Label lblRespuesta;
+        private System.Windows.Forms.Button btnPagar;
+        private System.Windows.Forms.Button btnFibonacci;
     }
 }
 
